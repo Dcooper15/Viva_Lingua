@@ -34,7 +34,7 @@ app.use(
         secret: "super cool",
         resave: false,
         saveUninitialized: true,
-        is_logged_in: false // This is ours
+        is_logged_in: false 
     })
 );
 

@@ -23,12 +23,12 @@ router.get("/", (req, res) => {
 
 
 router.get("/content", async function (req, res, next) {
-    //const data = await contentModel.getAll();
+    const postsData = await PostsModel.getAllPosts();
   
     res.render("template", {
       locals: {
         title: "VivaLingua",
-       // data: data,
+        data: postsData,
       },
       partials: {
         partial: "partial-maincontent",

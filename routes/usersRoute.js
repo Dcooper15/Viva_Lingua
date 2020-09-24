@@ -32,6 +32,25 @@ router.get("/", (req, res) => {
     });
   });
 
+  // router.get("/profile", (req, res) => {
+  //   const profileData = await UsersModel.Profile();
+  //   res.render("template", {
+  //     locals: {
+  //       title: "Hello User",
+  //       data: profileData,
+  //       is_logged_in: req.session.is_logged_in
+  //     },
+  //     partials: {
+  //       partial: "partial-profile",
+  //     },
+  //   });
+  // });
+
+
+
+
+
+
 router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/users/login");

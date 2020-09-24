@@ -5,6 +5,58 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> 
         <link rel="stylesheet" href="./css/style.css">
     </head>
+    ${!!is_logged_in ? `<header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/images/bulma-logo.png" width="75" height="50">
+              </a>
+          
+              <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
+            </div>
+          
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-end">
+                <a class="navbar-item" href="/languages">
+                  Languages
+                </a>
+          
+                <a class="navbar-item" href="/uploads">
+                  Create Post
+                </a>
+          
+                <a class="navbar-item" href="/profile">
+                  Profile
+                </a>
+          
+                <a class="navbar-item" href="/about">
+                  About
+                </a>
+          
+                <a class="navbar-item">
+                  <img src="" alt="">
+                </a>
+          
+          
+          
+              <div class="navbar-end">
+                <div class="navbar-item">
+                  <div class="buttons">
+                    <a class="button is-primary">
+                      <strong>Log out</strong>
+                    </a>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>`
+          :`<p></p>`}
+       </header>
     <body>
         ${partial}
     </body>

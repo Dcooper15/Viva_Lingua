@@ -1,0 +1,4 @@
+.navbar-end {
+    display: flex;
+    justify-content: right;
+}
