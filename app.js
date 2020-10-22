@@ -68,7 +68,7 @@ const usersController = require("./routes/usersRoute");
 const indexController = require("./routes/index");
 const uploadController = require("./routes/contentRoute");
 
-//const bulma
+
 
 // Use Controllers
 app.use("/uploads", uploadController);
