@@ -49,12 +49,6 @@ const storage = multer.diskStorage({
 });
 
 
-app.use(fileUpload({
-
-}));
-
-
-
 const server = http.createServer(app);
 
 
