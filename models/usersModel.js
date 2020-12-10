@@ -10,9 +10,8 @@ class UsersModel {
         this.email = email;
         this.password = password;
     }
-    // Private (instance) Method to Check Password Validity
+
     async checkPassword(hashedPassword) {
-        // Returns true or false
         return bcrypt.compareSync(this.password, hashedPassword);
     }
 
@@ -36,7 +35,6 @@ class UsersModel {
             const isValid = await this.checkPassword(response.password);
             console.log(response);
             if (!!isValid) {
-                // (!!IsValid) = if (isValid === absolutely, completely, 100% TRUE)
                 const { user_name, id  } = response;
                 console.log("This is response: ", response);
                 return { isValid, user_name, user_id: id}
